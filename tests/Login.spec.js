@@ -6,7 +6,7 @@ test("Login Smoke Test", async ({ page }) => {
   await expect(page.getByLabel("Email")).toBeVisible();
 });
 
-test.only("Fixtures to open Login Page", async ({ page, browser }) => {
+test("Fixtures to open Login Page", async ({ page, browser }) => {
   await page.goto("/login");
   await page.getByLabel("Email").fill("beginner@sample.com");
   await expect(page.getByLabel("Email")).toHaveValue("beginner@sample.com");
