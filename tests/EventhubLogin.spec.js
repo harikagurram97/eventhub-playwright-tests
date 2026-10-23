@@ -1,9 +1,7 @@
 import { test, expect } from "@playwright/test";
 
-const BASE_URL = "https://eventhub.rahulshettyacademy.com";
-
 test("Eventhub Login", async ({ page }) => {
-  await page.goto(`${BASE_URL}/login`);
+  await page.goto("https://eventhub.rahulshettyacademy.com/login");
   await expect(
     page.getByRole("heading", { name: "Sign in to EventHub" }),
   ).toBeVisible();
