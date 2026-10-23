@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig, devices } from "@playwright/test";
+import { chromium, defineConfig, devices, firefox } from "@playwright/test";
 
 /**
  * Read environment variables from file.
@@ -15,15 +15,24 @@ import { defineConfig, devices } from "@playwright/test";
 
 const config = {
   testDir: "./tests",
-  timeout: 10 * 1000,
+  timeout: 30 * 1000,
   expect: {
-    timeout: 10 * 1000,
+    timeout: 5000,
   },
+  retries: 2,
   reporter: "html",
   use: {
-    browserName: "chromium",
-    headless: true,
+    baseURL: "https://eventhub.rahulshettyacademy.com",
+    headless: false,
   },
+  projects: [
+    {
+      name: "chromium",
+    },
+    {
+      name: "firefox",
+    },
+  ],
 };
 
 module.exports = config;

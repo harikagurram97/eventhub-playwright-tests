@@ -10,3 +10,6 @@
 - Built on top of the core package and includes it as a dependency.
 - Adds everything needed for testing: `test` and `expect`, fixtures (like `page`), parallel execution, retries, HTML reports, traces and screenshots, and `playwright.config.js`.
 - Tests are run with `npx playwright test`.
+
+In Playwright Test, the page fixture provides one ready-to-use page for interacting with a website.
+A browser context is a separate session container that can hold one or more pages. Creating a fresh context gives you isolated browser state, including cookies, local storage, and session storage, so it behaves like a new browser session.
