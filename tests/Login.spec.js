@@ -13,8 +13,7 @@ test("Fixtures to open Login Page", async ({ page, browser }) => {
   const isolatedBrowserContext = await browser.newContext();
   const isolatedPage = await isolatedBrowserContext.newPage();
 
-  //await isolatedPage.goto(`https://eventhub.rahulshettyacademy.com/login`);
-  await isolatedPage.goto("/login");
+  await isolatedPage.goto(`https://eventhub.rahulshettyacademy.com/login`);
   await expect(
     isolatedPage.getByRole("heading", { name: "Sign in to EventHub" }),
   ).toBeVisible();
