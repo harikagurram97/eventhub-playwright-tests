@@ -23,7 +23,7 @@ const config = {
   reporter: "html",
   use: {
     baseURL: "https://eventhub.rahulshettyacademy.com",
-    headless: false,
+    headless: true,
   },
   projects: [
     {
